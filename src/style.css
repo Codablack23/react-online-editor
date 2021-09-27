@@ -42,3 +42,9 @@ body {
   border: none;
   background: transparent;
 }
+.result-frame {
+  min-width: 100%;
+  min-height: 100vh;
+  border-radius: 15px;
+  border: none;
+}

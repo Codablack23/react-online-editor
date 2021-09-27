@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Result() {
+export default function Result(result) {
   return (
-    <div className="d-none">
-      <h1>Result</h1>
+    <div className="">
+      <iframe src="" className="result-frame"></iframe>
     </div>
   );
 }
