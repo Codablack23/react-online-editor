@@ -32,23 +32,23 @@ export default function EditorComponent() {
           <button className="btn w3-red">View</button>
         </div>
       </div>
-      {/* <div className="editor-container">
-        {active == 'html' && (
+      <div className="editor-container">
+        {active == 'html' && 
           <div className="html">
             <textarea
               placeholder="Your HTML Code Goes Here"
               className="html-text w3-card-4 w3-text-blue"
             ></textarea>
           </div>
-        )}
-        {/* {active == 'css' && (
+        }
+        {active == 'css' && 
           <div className="css">
             <textarea
               placeholder="Your CSS Code Goes Here"
               className="css-text w3-card-4 w3-text-green"
             ></textarea>
-          </div> *
-
+          </div> 
+        }
         {active == 'js' && (
           <div className="js">
             <textarea
@@ -57,7 +57,7 @@ export default function EditorComponent() {
             ></textarea>
           </div>
         )}
-      </div> */}
+      </div>
     </div>
   );
 }
