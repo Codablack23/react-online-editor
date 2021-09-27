@@ -11,8 +11,8 @@ export default function App() {
   }
   return (
     <div className="app">
-      <Editor />
-      <Result />
+      <Editor editCode={changeCode} />
+      <Result result={code} />
     </div>
   );
 }
