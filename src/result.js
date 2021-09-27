@@ -4,7 +4,6 @@ import Frame, { FrameContextConsumer } from 'react-frame-component';
 export default function Result({ result }) {
   return (
     <div className="w3-text-orange">
-      <h1>me</h1>
       <Frame>
         <FrameContextConsumer>
           {
