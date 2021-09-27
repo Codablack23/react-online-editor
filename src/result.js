@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Result(result) {
   return (
-    <div className="">
+    <div className="w3-text-orange">
       <h1>me</h1>
       <iframe src="" className="result-frame"></iframe>
     </div>
