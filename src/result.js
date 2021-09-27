@@ -5,10 +5,8 @@ export default function Result({ result }) {
     <div className="w3-text-orange">
       <h1>me</h1>
       <iframe
-        src="https://www.youtube.com/embed/cWDJoK8zw58"
-        onClick={(e) => {
-          console.log(e.target);
-        }}
+        className="result-frame"
+        value={result}
       ></iframe>
     </div>
   );
