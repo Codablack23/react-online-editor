@@ -5,6 +5,16 @@ export default function EditorComponent() {
   const [html_code, setHtmlCode] = useState('');
   const [css_code, setCssCode] = useState('');
   const [js_code, setJsCode] = useState('');
+  const [fullCode,setFullCode]=useState(
+    `<style>
+     ${css_code}
+    </style>
+    ${html_code}
+    <script>
+    ${js_code}
+    </script>
+    `
+  )
 
   return (
     <div className="editor">
