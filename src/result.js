@@ -4,7 +4,7 @@ import Frame, { FrameContextConsumer } from 'react-frame-component';
 export default function Result({ result }) {
   return (
     <div className="w3-text-orange">
-      <iframe srcdoc={result} src="" frameborder="0"></iframe>
+      <iframe srcDoc={result} src="" frameBorder="0"></iframe>
     </div>
   );
 }
