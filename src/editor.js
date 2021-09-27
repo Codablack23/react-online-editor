@@ -5,17 +5,19 @@ export default function EditorComponent({ changeCode }) {
   const [html_code, setHtmlCode] = useState('');
   const [css_code, setCssCode] = useState('');
   const [js_code, setJsCode] = useState('');
-  const [fullCode, setFullCode] = useState(
-    `
-    <style>
+  const [fullCode, setFullCode] = useState();
+
+  const addCode=()=>{
+    setFullCode(`
+     <style>
      ${css_code}
-    </style>
-    ${html_code}
-    <script>
-    ${js_code}
-    </script>
-    `
-  );
+     </style>
+     ${html_code}
+     <script>
+     ${js_code}
+     </script
+    `)
+  }
   console.log(css_code, html_code, js_code);
   return (
     <div className="editor">
