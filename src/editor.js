@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function EditorComponent(editCode) {
+export default function EditorComponent({ changeCode }) {
   const [active, setActive] = useState('html');
   const [html_code, setHtmlCode] = useState('');
   const [css_code, setCssCode] = useState('');
   const [js_code, setJsCode] = useState('');
   const [fullCode, setFullCode] = useState(
-    `<style>
+    console.log(css_code, html_code, js_code)`
+    <style>
      ${css_code}
     </style>
     ${html_code}
@@ -15,7 +16,6 @@ export default function EditorComponent(editCode) {
     </script>
     `
   );
-  editCode(fullCode);
 
   return (
     <div className="editor">
@@ -61,6 +61,7 @@ export default function EditorComponent(editCode) {
               className="html-text w3-card-4 w3-text-blue"
               onChange={(e) => {
                 setHtmlCode(e.target.value);
+                changeCode(fullCode);
               }}
             ></textarea>
           </div>
@@ -73,6 +74,7 @@ export default function EditorComponent(editCode) {
               value={css_code}
               onChange={(e) => {
                 setCssCode(e.target.value);
+                changeCode(fullCode);
               }}
             ></textarea>
           </div>
@@ -85,6 +87,7 @@ export default function EditorComponent(editCode) {
               value={js_code}
               onChange={(e) => {
                 setJsCode(e.target.value);
+                changeCode(fullCode);
               }}
             ></textarea>
           </div>
