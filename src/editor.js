@@ -6,7 +6,7 @@ export default function EditorComponent({ changeCode }) {
   const [css_code, setCssCode] = useState('');
   const [js_code, setJsCode] = useState('');
   const [fullCode, setFullCode] = useState(
-    console.log(css_code, html_code, js_code)`
+    `
     <style>
      ${css_code}
     </style>
@@ -16,7 +16,7 @@ export default function EditorComponent({ changeCode }) {
     </script>
     `
   );
-
+  console.log(css_code, html_code, js_code);
   return (
     <div className="editor">
       <div className=" d-flex justify-content-between tab-nav">
