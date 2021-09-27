@@ -63,6 +63,7 @@ export default function EditorComponent({ changeCode }) {
               className="html-text w3-card-4 w3-text-blue"
               onChange={(e) => {
                 setHtmlCode(e.target.value);
+                addCode()
                 changeCode(fullCode);
               }}
             ></textarea>
@@ -76,6 +77,7 @@ export default function EditorComponent({ changeCode }) {
               value={css_code}
               onChange={(e) => {
                 setCssCode(e.target.value);
+                addCode()
                 changeCode(fullCode);
               }}
             ></textarea>
@@ -89,6 +91,7 @@ export default function EditorComponent({ changeCode }) {
               value={js_code}
               onChange={(e) => {
                 setJsCode(e.target.value);
+                addCode()
                 changeCode(fullCode);
               }}
             ></textarea>
