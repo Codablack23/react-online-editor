@@ -10,19 +10,19 @@ export default function EditorComponent() {
           <ul>
             <li
               className="tab-link mr-3 btn w3-text-grey w3-card-4"
-              onClick={this.setActive('html')}
+              onClick={()=>{setActive('html')}}
             >
               HTML
             </li>
             <li
               className="tab-link mr-3 btn w3-text-grey w3-card-4"
-              onClick={this.setActive('css')}
+              onClick={()=>{setActive('css')}}
             >
               CSS
             </li>
             <li
               className="tab-link mr-3 btn w3-text-grey w3-card-4"
-              onClick={this.setActive('js')}
+              onClick={()=>{setActive('js')}}
             >
               JS
             </li>
@@ -49,14 +49,14 @@ export default function EditorComponent() {
             ></textarea>
           </div> 
         }
-        {active == 'js' && (
+        {active == 'js' && 
           <div className="js">
             <textarea
               placeholder="Your Javascript Code Goes Here"
               className="js-text w3-card-4 w3-text-red"
             ></textarea>
           </div>
-        )}
+        }
       </div>
     </div>
   );
