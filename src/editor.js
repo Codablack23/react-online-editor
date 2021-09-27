@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-export default function EditorComponent() {
+export default function EditorComponent(editCode) {
   const [active, setActive] = useState('html');
   const [html_code, setHtmlCode] = useState('');
   const [css_code, setCssCode] = useState('');
   const [js_code, setJsCode] = useState('');
-  const [fullCode,setFullCode]=useState(
+  const [fullCode, setFullCode] = useState(
     `<style>
      ${css_code}
     </style>
@@ -14,7 +14,8 @@ export default function EditorComponent() {
     ${js_code}
     </script>
     `
-  )
+  );
+  editCode(fullCode);
 
   return (
     <div className="editor">
