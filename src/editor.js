@@ -46,7 +46,11 @@ export default function EditorComponent() {
           <div className="html">
             <textarea
               placeholder="Your HTML Code Goes Here"
+              value={html_code}
               className="html-text w3-card-4 w3-text-blue"
+              onClick={(e) => {
+                setHtmlCode(e.target.value);
+              }}
             ></textarea>
           </div>
         )}
