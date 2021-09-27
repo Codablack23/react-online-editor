@@ -61,7 +61,7 @@ export default function EditorComponent({ changeCode }) {
               placeholder="Your HTML Code Goes Here"
               value={html_code}
               className="html-text w3-card-4 w3-text-blue"
-              onChange={(e) => {
+              onKeyDown={(e) => {
                 setHtmlCode(e.target.value);
                 addCode();
                 changeCode(fullCode);
@@ -75,7 +75,7 @@ export default function EditorComponent({ changeCode }) {
               placeholder="Your CSS Code Goes Here"
               className="css-text w3-card-4 w3-text-green"
               value={css_code}
-              onChange={(e) => {
+              onKeyDown={(e) => {
                 setCssCode(e.target.value);
                 addCode();
                 changeCode(fullCode);
@@ -89,7 +89,7 @@ export default function EditorComponent({ changeCode }) {
               placeholder="Your Javascript Code Goes Here"
               className="js-text w3-card-4 w3-text-red"
               value={js_code}
-              onChange={(e) => {
+              onKeyDown={(e) => {
                 setJsCode(e.target.value);
                 addCode();
                 changeCode(fullCode);
