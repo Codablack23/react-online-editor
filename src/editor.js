@@ -48,7 +48,7 @@ export default function EditorComponent() {
               placeholder="Your HTML Code Goes Here"
               value={html_code}
               className="html-text w3-card-4 w3-text-blue"
-              onClick={(e) => {
+              onChange={(e) => {
                 setHtmlCode(e.target.value);
               }}
             ></textarea>
@@ -60,7 +60,7 @@ export default function EditorComponent() {
               placeholder="Your CSS Code Goes Here"
               className="css-text w3-card-4 w3-text-green"
               value={css_code}
-              onClick={(e) => {
+              onChange={(e) => {
                 setCssCode(e.target.value);
               }}
             ></textarea>
@@ -72,7 +72,7 @@ export default function EditorComponent() {
               placeholder="Your Javascript Code Goes Here"
               className="js-text w3-card-4 w3-text-red"
               value={js_code}
-              onClick={(e) => {
+              onChange={(e) => {
                 setJsCode(e.target.value);
               }}
             ></textarea>
