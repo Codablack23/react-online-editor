@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function EditorComponent() {
   const [active, setActive] = useState('html');
   const [html_code, setHtmlCode] = useState('');
-  const [css_code, seCssCode] = useState('');
+  const [css_code, setCssCode] = useState('');
   const [js_code, setJsCode] = useState('');
 
   return (
@@ -59,6 +59,10 @@ export default function EditorComponent() {
             <textarea
               placeholder="Your CSS Code Goes Here"
               className="css-text w3-card-4 w3-text-green"
+              value={css_code}
+              onClick={(e) => {
+                setCssCode(e.target.value);
+              }}
             ></textarea>
           </div>
         )}
@@ -67,6 +71,10 @@ export default function EditorComponent() {
             <textarea
               placeholder="Your Javascript Code Goes Here"
               className="js-text w3-card-4 w3-text-red"
+              value={js_code}
+              onClick={(e) => {
+                setJsCode(e.target.value);
+              }}
             ></textarea>
           </div>
         )}
