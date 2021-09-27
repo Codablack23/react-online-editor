@@ -7,7 +7,7 @@ export default function EditorComponent({ changeCode }) {
   const [js_code, setJsCode] = useState('');
   const [fullCode, setFullCode] = useState();
 
-  const addCode=()=>{
+  const addCode = () => {
     setFullCode(`
      <style>
      ${css_code}
@@ -16,8 +16,8 @@ export default function EditorComponent({ changeCode }) {
      <script>
      ${js_code}
      </script
-    `)
-  }
+    `);
+  };
   console.log(css_code, html_code, js_code);
   return (
     <div className="editor">
@@ -61,9 +61,9 @@ export default function EditorComponent({ changeCode }) {
               placeholder="Your HTML Code Goes Here"
               value={html_code}
               className="html-text w3-card-4 w3-text-blue"
-              onKeyDown={(e) => {
+              onChange={(e) => {
                 setHtmlCode(e.target.value);
-                addCode()
+                addCode();
                 changeCode(fullCode);
               }}
             ></textarea>
@@ -75,9 +75,9 @@ export default function EditorComponent({ changeCode }) {
               placeholder="Your CSS Code Goes Here"
               className="css-text w3-card-4 w3-text-green"
               value={css_code}
-              onKeyDown={(e) => {
+              onChange={(e) => {
                 setCssCode(e.target.value);
-                addCode()
+                addCode();
                 changeCode(fullCode);
               }}
             ></textarea>
@@ -89,9 +89,9 @@ export default function EditorComponent({ changeCode }) {
               placeholder="Your Javascript Code Goes Here"
               className="js-text w3-card-4 w3-text-red"
               value={js_code}
-              onKeyDown={(e) => {
+              onChange={(e) => {
                 setJsCode(e.target.value);
-                addCode()
+                addCode();
                 changeCode(fullCode);
               }}
             ></textarea>
